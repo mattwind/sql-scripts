@@ -78,14 +78,6 @@ my %conf = (
 $conf{'programName'} =~ s/(.)*[\/,\\]//;                         ## Remove path from filename
 $0 = "[$conf{'programName'}]";
 
-
-
-
-
-
-
-
-
 #############################
 ##
 ##      MAIN PROGRAM
@@ -97,7 +89,6 @@ initialize();
 
 ## Process Command Line
 processCommandLine();
-
 
 ## get current timestamp for use later
 my ($sec,$min,$hour,$mday,$mon,$year,$wday,$yday,$isdst) = localtime();
@@ -155,12 +146,6 @@ if ($conf{'mode'} eq "running") {
         }
     }
     
-    
-    
-    
-    
-    
-    
     #############################
     ########  END MAIN CODE  ####
     #############################
@@ -169,23 +154,6 @@ if ($conf{'mode'} eq "running") {
 
 ## Quit
 quit("",0);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 ######################################################################
 ## Function:    help ()
@@ -231,10 +199,6 @@ EOM
 exit(1);
 }
 
-
-
-
-
 ######################################################################
 ##  Function: initialize ()
 ##  
@@ -260,13 +224,6 @@ sub initialize {
   
   return(1);
 }
-
-
-
-
-
-
-
 
 ######################################################################
 ##  Function: processCommandLine ()
@@ -319,21 +276,6 @@ sub processCommandLine {
     return(1);
 }
  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ###############################################################################################
 ##  Function:    printmsg (string $message, int $level)
 ##
@@ -396,14 +338,6 @@ sub printmsg {
     return(0);
 }
 
-
-
-
-
-
-
-
-
 ######################################################################
 ##  Function:    quit (string $message, int $errorLevel)
 ##  
@@ -431,6 +365,3 @@ sub quit {
   ## Exit
   exit($incoming{'errorLevel'});
 }
-
-
-
